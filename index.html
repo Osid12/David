@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J-Blast | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --bg-dark: #001f3f;
+      --text-light: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    header {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: var(--text-light);
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .banner {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .categories {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .categories h2 {
+      margin-bottom: 1rem;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .category-item {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">J-Blast</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#login">Login</a>
+      <a href="#cart">Cart</a>
+      <a href="https://www.facebook.com/profile.php?id=100048961072822" target="_blank">Facebook</a>
+    </nav>
+  </header>
+
+  <section class="banner" id="home">
+    <h1>Welcome to J-Blast</h1>
+    <p>Your No. 1 Online Shopping Experience</p>
+  </section>
+
+  <section class="categories" id="categories">
+    <h2>Top Categories</h2>
+    <div class="category-grid">
+      <div class="category-item">Phones & Tablets</div>
+      <div class="category-item">Electronics</div>
+      <div class="category-item">Fashion</div>
+      <div class="category-item">Groceries</div>
+      <div class="category-item">Health & Beauty</div>
+      <div class="category-item">Home & Living</div>
+    </div>
+  </section>
+</body>
+</html>

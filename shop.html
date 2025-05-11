@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - J-Blast</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header with logo, navigation -->
+  <header>
+    <div class="logo">J-Blast</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Shop Section: Product Listings -->
+  <section id="shop">
+    <h2>Featured Products</h2>
+    <div class="product-list">
+      <!-- Product card template -->
+      <div class="product-card">
+        <img src="product-image.jpg" alt="Product Image" />
+        <h3>Product Name</h3>
+        <p>₦1000</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <!-- More product cards can go here -->
+    </div>
+  </section>
+
+  <script>
+    // Dummy product data for now (can be dynamically loaded later)
+    const products = [
+      { name: "Product 1", price: "₦1000", imageUrl: "product1.jpg" },
+      { name: "Product 2", price: "₦1500", imageUrl: "product2.jpg" },
+      // Add more products as needed
+    ];
+
+    // Dynamically populate product list
+    const productList = document.querySelector(".product-list");
+    products.forEach(product => {
+      const productCard = document.createElement("div");
+      productCard.className = "product-card";
+      productCard.innerHTML = `
+        <img src="${product.imageUrl}" alt="${product.name}" />
+        <h3>${product.name}</h3>
+        <p>${product.price}</p>
+        <button class="add-to-cart">Add to Cart</button>
+      `;
+      productList.appendChild(productCard);
+    });
+  </script>
+</body>
+</html>

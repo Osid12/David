@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart - J-Blast</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cart Section -->
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <button id="checkout">Proceed to Checkout</button>
+  </section>
+
+  <script>
+    const cart = [];
+
+    // Adding product to cart
+    const addToCart = (product) => {
+      cart.push(product);
+      renderCart();
+    };
+
+    // Rendering cart items
+    const renderCart = () => {
+      const cartItems = document.getElementById("cart-items");
+      cartItems.innerHTML = "";
+      cart.forEach(item => {
+        const cartItem = document.createElement("div");
+        cartItem.className = "cart-item";
+        cartItem.innerHTML = `
+          <h3>${item.name}</h3>
+          <p>${item.price}</p>
+        `;
+        cartItems.appendChild(cartItem);
+      });
+    };
+
+    // Checkout functionality
+    document.getElementById("checkout").addEventListener("click", () => {
+      alert("Proceeding to Checkout...");
+    });
+
+    // Example of adding a product to the cart
+    addToCart({ name: "Product 1", price: "₦1000" });
+  </script>
+</body>
+</html>
